@@ -1,0 +1,51 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Synthetic AWS REST preflight example",
+    "version": "1.0.0"
+  },
+  "security": [
+    {
+      "ExampleKey": []
+    }
+  ],
+  "paths": {
+    "/pets": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Synthetic example only"
+          }
+        },
+        "security": []
+      },
+      "post": {
+        "security": [],
+        "responses": {
+          "201": {
+            "description": "Explicit public override, intentionally unchanged"
+          }
+        }
+      },
+      "put": {
+        "security": [
+          {}
+        ],
+        "responses": {
+          "200": {
+            "description": "Explicit anonymous alternative, intentionally unchanged"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "ExampleKey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-Example-Key"
+      }
+    }
+  }
+}
