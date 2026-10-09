@@ -16,7 +16,12 @@
           "200": {
             "description": "Synthetic example only"
           }
-        }
+        },
+        "security": [
+          {
+            "ExampleKey": []
+          }
+        ]
       },
       "post": {
         "security": [],
